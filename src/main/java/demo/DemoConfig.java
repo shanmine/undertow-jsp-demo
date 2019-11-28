@@ -7,6 +7,7 @@ import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
 import com.jfinal.core.JFinal;
+import com.jfinal.kit.PropKit;
 import com.jfinal.server.undertow.UndertowServer;
 import com.jfinal.template.Engine;
 
@@ -21,8 +22,10 @@ public class DemoConfig extends JFinalConfig {
     }
 
     public void configConstant(Constants me) {
-        me.setDevMode(true);
+        PropKit.use("app.properties", "UTF-8");
+        me.setEncoding("utf-8");
         me.setDenyAccessJsp(false);
+        me.setDevMode(PropKit.getBoolean("devMode", false));
     }
 
     public void configRoute(Routes me) {
