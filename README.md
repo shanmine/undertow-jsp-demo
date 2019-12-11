@@ -4,7 +4,7 @@ This project demonstrates how to serve a JSP file through an embedded Undertow s
  
 ## Running
 
-### *nix
+### Linux
  
 ```bash
 ./jfinal start
