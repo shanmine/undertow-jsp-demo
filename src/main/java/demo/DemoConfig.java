@@ -6,9 +6,7 @@ import com.jfinal.config.Interceptors;
 import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
-import com.jfinal.core.JFinal;
 import com.jfinal.kit.PropKit;
-import com.jfinal.server.undertow.UndertowServer;
 import com.jfinal.template.Engine;
 
 public class DemoConfig extends JFinalConfig {
@@ -29,6 +27,7 @@ public class DemoConfig extends JFinalConfig {
     }
 
     public void configRoute(Routes me) {
+        me.add("/", IndexController.class);
         me.add("/hello", HelloController.class);
     }
 
