@@ -74,7 +74,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.2</version>
+                <!-- 降低3.1.2版本，由于Eclipse开发环境下pom文件报错：Unknown Error -->
+                <version>3.1.1</version>
                 <configuration>
                     <excludes>
                         <exclude>*.txt</exclude>
