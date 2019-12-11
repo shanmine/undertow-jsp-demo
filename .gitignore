@@ -18,6 +18,11 @@
 # .idea/gradle.xml
 # .idea/libraries
 
+## Eclipse
+.classpath
+.project
+.settings/
+
 ## File-based project format
 *.ipr
 *.iws
