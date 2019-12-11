@@ -16,6 +16,8 @@ public class JspServer {
             HashMap<String, TagLibraryInfo> tagLibraryInfo = new HashMap<>();
             JspServletBuilder.setupDeployment(wb.getDeploymentInfo(), new HashMap<String, JspPropertyGroup>(), tagLibraryInfo,
                     new HackInstanceManager());
+            wb.addErrorPage(404, "/error/404.jsp");
+            wb.addErrorPage(500, "/error/500.jsp");
         }).setHost("localhost").setPort(8080).setDevMode(true).start();
     }
 
